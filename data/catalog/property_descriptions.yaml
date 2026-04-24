@@ -1,0 +1,305 @@
+apartments:
+  introduction: "Appartements premium en front de mer, composés de 2, 3 ou 4 chambres avec salon"
+  key_features:
+    - "Accès direct à la crique exclusive réservée aux résidents"
+    - "Terrasses généreuses avec vue panoramique sur la baie de Tanger"
+    - "Parking titré au sous-sol inclus"
+    - "Accès à l'Alma Club (piscine, spa, fitness, restaurants)"
+    - "Finitions modernes et prestations haut de gamme"
+    - "Services hôteliers premium disponibles"
+  marketing_intro: "Découvrez nos appartements premium, les plus beaux écrins face mer. Chaque logement offre une vue panoramique sur la baie de Tanger, des terrasses généreuses, le parking inclus et un accès exclusif à notre crique privée."
+
+  RIPT:
+    name: "RIPT - Résidence Immobilière de Promotion Touristique"
+    description: "Appartements meublés gérés par Soho Boutique Hoteles - l'investissement idéal"
+    status: "Résidences meublées avec gestion hôtelière professionnelle"
+    
+    key_benefits:
+      - "Rendement annuel garanti: 5% du prix d'acquisition"
+      - "Durée du programme: 9 ans"
+      - "Utilisateur bénéficie de 50 jours de jouissance annuelle"
+      - "Meublage complet aux standards hôtelier 5*"
+      - "Aucun frais ni charges de syndic"
+      - "Services hôteliers premium: piscine, lagon aquatique, jardins, Alma Club"
+      - "Gestion professionnelle entière par l'opérateur hôtelier"
+    
+    types:
+      F1:
+        bedrooms: 1
+        description: "Studio avec chambre, salle de bain et cuisine ouverte"
+        surface_range: "30-40 m²"
+        terrace_range: "20-30 m²"
+        price_range: "1,3 à 1,8 MDH"
+        price_per_sqm: "32 000 DH/m² (parking inclus)"
+      
+      F2:
+        bedrooms: 1
+        living_rooms: 1
+        description: "Appartement avec 1 chambre, 1 salon et cuisine ouverte ou fermée"
+        surface_range: "50 m²"
+        terrace_range: "20-30 m²"
+        parking: "Titré au sous-sol"
+        price: "Environ 2,3 MDH"
+        price_per_sqm: "32 000 DH/m² (parking inclus)"
+      
+      F3:
+        bedrooms: 2
+        living_rooms: 1
+        description: "Appartement spacieux avec 2 chambres, 1 salon et cuisine fermée"
+        surface_range: "85-100 m²"
+        terrace_range: "20-30 m²"
+        parking: "Titré au sous-sol"
+        price: "Environ 3,6 MDH"
+        price_per_sqm: "32 000 DH/m² (parking inclus)"
+    
+    all_apartments_features:
+      - "Vue panoramique sur la baie de Tanger (quelques exceptions, à vérifier avec commercial)"
+      - "Terrasse généreuse avec vue mer"
+      - "Parking titré au sous-sol"
+      - "Accès direct à l'Alma Club (piscine lagon, jardins, sports, restaurants)"
+      - "Services hôteliers disponibles"
+    
+    payment_terms: "30% à la réservation, 20% à la fin des gros œuvres, reste à la livraison"
+    delivery: "Septembre 2027"
+    contract: "Contrat de réservation sous seing privé"
+    vefa: "Non disponible actuellement - consulter l'équipe commerciale pour options"
+
+  residences_privees:
+    name: "Résidences Privées"
+    description: "Appartements de prestige pour résidence principale ou investissement"
+    status: "60 appartements sur 4 niveaux, dont 2 duplex en rez-de-jardin"
+    
+    types:
+      F2:
+        layout: "1 chambre + salon"
+        surface: "50 m²"
+        terrace: "20-40 m²"
+        parking: "Titré au sous-sol"
+        features: "Vue baie, accès Alma Club, jardins paysagers"
+      
+      F3:
+        layout: "2 chambres + salon"
+        surface: "85-100 m²"
+        terrace: "20-40 m²"
+        parking: "Titré au sous-sol"
+        features: "Vue baie, accès Alma Club, jardins paysagers"
+      
+      F4:
+        layout: "3 chambres + salon"
+        surface: "110-150 m²"
+        terrace: "20-40 m²"
+        parking: "Titré au sous-sol"
+        features: "Vue baie, accès Alma Club, jardins paysagers"
+      
+      duplex:
+        layout: "4 chambres + salon en duplex"
+        surface: "195 m²"
+        terrace: "50-70 m²"
+        private_garden: "~24 m²"
+        parking: "Titré au sous-sol"
+        features: "Jardin privé, piscine privée possible, vue baie, intimité préservée"
+    
+    all_features:
+      - "Grandes terrasses avec vue panoramique baie"
+      - "Parking titré au sous-sol inclus"
+      - "Accès direct à l'Alma Club (piscine, spa, fitness, restaurants)"
+      - "Accès à l'hôtel 5* Soho Boutique"
+      - "Accès au chiringuito et jardins paysagers"
+      - "Allées arborées"
+      - "Accès à la crique exclusive"
+    
+    payment_terms: "30% à la réservation, 20% à la fin des gros œuvres, reste à la livraison"
+    delivery: "Septembre 2027"
+    contract: "Contrat de réservation sous seing privé"
+
+villas:
+  introduction: "Villas premium exclusives architecturées par des maîtres d'œuvre de prestige"
+  key_features:
+    - "Emprise généreuse en front de mer"
+    - "Terrasses et piscines privées à débordement"
+    - "Suites spacieuses avec salles de bain privées"
+    - "Jardins privatifs soigneusement aménagés"
+    - "Vue panoramique embrassant toute la baie de Tanger"
+    - "Finitions très haut de gamme: bois massif, marbre italien, pierre blonde"
+    - "Parking spacieux pouvant accueillir plusieurs véhicules"
+    - "Chambres et locaux techniques pour personnel"
+    - "Intimité préservée: villas isolées, confort acoustique optimal"
+  
+  general_features:
+    finishes:
+      - "Bois massif de prestige"
+      - "Marbre italien premier choix"
+      - "Pierre blonde noble"
+      - "Cuisine équipée haut de gamme"
+      - "Finitions élégantes très haut de gamme dans toutes les pièces"
+    
+    architecture: "Conçues par des architectes renommés avec références nationales et internationales"
+    
+    privacy: "Villas isolées - intimité préservée, confort acoustique optimal, atmosphère paisible"
+    
+    view: "Chaque villa bénéficie d'une vue mer panoramique embrassant toute la baie de Tanger - spectacle naturel unique à toute heure"
+    
+    customization: "Possible - à discuter avec l'équipe commerciale qui dispose de notes techniques détaillées sur les matériaux et finitions"
+  
+  type_1:
+    description: "Villa de prestige sur 3 niveaux, idéale pour famille nombreuse"
+    terrain: "500-600 m²"
+    living_area: "650 m² de surfaces planchers"
+    bedrooms: 4
+    suites: "4 suites spacieuses, chacune avec sa propre salle de bain"
+    amenities:
+      - "Suites au rez-de-chaussée face mer"
+      - "Séjour avec cheminée et terrasse"
+      - "Piscine privée à débordement surplombant la mer"
+      - "Cuisine et salon de réception au dernier étage"
+      - "Jardin privatif soigneusement aménagé"
+      - "2 chambres personnel et rangements au sous-sol"
+      - "Très grand parking au sous-sol (3+ voitures)"
+      - "3 locaux techniques et boxes"
+    price: "20 MDH"
+    status: "Vente sur plan, livraison Septembre 2027"
+  
+  type_2:
+    description: "Villa unique et élégante avec architecture signature"
+    terrain: "860 m² (villa unique de ce type)"
+    living_area: "890 m² de surfaces planchers"
+    bedrooms: 5
+    suites: "5 suites très spacieuses avec vue panoramique baie"
+    amenities:
+      - "Entrée par les hauteurs"
+      - "Grande nef de verre surplombant la mer"
+      - "Salon extérieur dans la pierre"
+      - "Piscine privée à débordement"
+      - "Suite parentale tournée vers l'aube"
+      - "Chambres en enfilade avec vue mer"
+      - "Jardin privatif raffiné"
+      - "Sous-sol avec garage spacieux et techniques"
+      - "Très grand parking (5+ voitures)"
+      - "Dortoir pour personnel et locaux techniques"
+    price: "35 MDH"
+    status: "Vente sur plan, livraison Septembre 2027"
+    note: "Unique - une seule villa de ce type disponible"
+  
+  type_3:
+    description: "Villa spacieuse alliant élégance et confort"
+    terrain: "2 villas disponibles: 720 et 1 075 m²"
+    living_area: "720 m² de surfaces planchers"
+    bedrooms: 4
+    suites: "4 suites spacieuses avec salles de bain privées"
+    amenities:
+      - "Salon de réception surplombant la baie"
+      - "Grande baie vitrée panoramique"
+      - "Cuisine linéaire ouverte sur terrasse"
+      - "Séjour en double hauteur"
+      - "Piscine privée au niveau du séjour"
+      - "Suite parentale de prestige"
+      - "3 chambres au rez-de-jardin"
+      - "Jardin privatif aménagé"
+      - "Grand parking au sous-sol (4 voitures)"
+      - "2 chambres personnel et 3 locaux techniques"
+    price: "25-30 MDH (selon surface)"
+    status: "Vente sur plan, livraison Septembre 2027"
+  
+  payment_terms: "30% à la réservation, 20% à la fin des gros œuvres, reste à la livraison"
+  delivery: "Septembre 2027"
+  contract: "Contrat de réservation sous seing privé"
+  vefa: "Non disponible actuellement - consulter l'équipe commerciale"
+  syndic_charges: "À déterminer par l'assemblée générale, gérés par société privée"
+  price_negotiation: "Prix fixes - consulter l'équipe commerciale pour confirmations"
+  visits: "Rendez-vous sur site avec nos commerciaux"
+
+land_lots:
+  introduction: "Lots de terrains en lotissement sécurisé pour construire votre villa de rêve"
+  key_features:
+    - "Vue panoramique sur la baie de Tanger sans vis-à-vis"
+    - "Accès à tous les équipements du resort (crique, Alma Club, etc.)"
+    - "Infrastructure complète: eau, électricité, fibre optique"
+    - "Lotissement sécurisé et confidentiel"
+    - "Allées piétonnes, jardins partagés"
+    - "Crique exclusive réservée aux résidents"
+  
+  regulations:
+    construction_allowed: "Jusqu'à R+1 (RDC + 2 étages)"
+    basement: "Autorisé - peut occuper toute l'emprise du RDC"
+    subject_to: "Dispositions du cahier des charges du lotissement"
+    first_floor_coverage: "80% de la surface du RDC"
+    second_floor_coverage: "50% de la surface du 1er étage"
+  
+  band_villas:
+    name: "Villas en Bande (Mitoyennes sur façades latérales)"
+    description: "Lot avec 2 façades libres pour maximum de lumière"
+    quantity: "Disponibles"
+    surface_range: "220-320 m²"
+    price_per_sqm: "18 000 DH/m² (prix fixe)"
+    budget_example: "À partir de 3,2M DH"
+    orientation: "Façade sur baie orientation majoritairement Ouest"
+    features:
+      - "2 façades libres (éclairage maximal)"
+      - "Mitoyenneté sur façades latérales"
+      - "Vue panoramique baie au moins au 2e étage"
+      - "Accès à l'infrastructure du resort"
+    payment_terms: "50% avance à réservation, 50% livraison décembre 2025"
+    delivery: "Décembre 2025 (lots titrés)"
+  
+  semi_detached_villas:
+    name: "Villas Jumelées (Semi-Détachées)"
+    description: "Lot avec 3 façades libres pour intimité accrue"
+    quantity: "Disponibles"
+    surface_range: "330-680 m²"
+    price_per_sqm: "16 000 DH/m² (prix fixe)"
+    budget_example: "À partir de 5,3M DH"
+    orientation: "Façade sur baie orientation majoritairement Ouest"
+    features:
+      - "3 façades libres (plus d'intimité)"
+      - "Mitoyenneté avec 1 seul voisin"
+      - "Vue panoramique baie au moins au 2e étage"
+      - "Plus grande maîtrise de l'espace"
+      - "Accès à l'infrastructure du resort"
+    payment_terms: "50% avance à réservation, 50% livraison décembre 2025"
+    delivery: "Décembre 2025 (lots titrés)"
+  
+  common_features:
+    infrastructure: "Eau, électricité, fibre optique posées"
+    site_plan_delivery: "Décembre 2025"
+    view_characteristics: "Vue panoramique sans vis-à-vis sur baie - au moins au 2e étage"
+    contract: "Demande de mise en option"
+    vefa: "N'existe pas pour lots de terrain"
+    syndic_charges: "À déterminer + gérés par société privée"
+    visits: "Rendez-vous sur site avec commerciaux pour études de terrain"
+    advice: "Visitez sur place et discutez avec notre commercial pour choix optimal"
+
+investment_opportunities:
+  RIPT_apartments:
+    target_investor: "Cherchant rendement régulier et gestion sans stress"
+    benefits:
+      - "Rendement 5% annuel garanti 9 ans"
+      - "Meublage et gestion hôtelier inclus"
+      - "Aucune charge de syndic"
+      - "50 jours jouissance personnelle annuelle"
+    ideal_for: "Investisseurs cherchant revenu passif + accès loisir"
+  
+  private_apartments:
+    target_resident: "Cherchant résidence principale ou pied-à-terre"
+    benefits:
+      - "Accès illimité à tous les équipements"
+      - "Propriété entière sans gestion hôtelière"
+      - "Flexible sur usage"
+    ideal_for: "Résidents souhaitant appartement de standing sans gestion"
+  
+  villas:
+    target_resident: "Cherchant prestige et intimité"
+    benefits:
+      - "Propriété de prestige en front de mer"
+      - "Intimité totale, villas isolées"
+      - "Vue panoramique unique"
+      - "Accès à tous les équipements du resort"
+    ideal_for: "Familles aisées, professionnels, investisseurs prestige"
+  
+  land_lots:
+    target_buyer: "Cherchant liberté de conception"
+    benefits:
+      - "Construire selon vos plans personnels"
+      - "Prix du terrain attrayant (16-18k DH/m²)"
+      - "Infrastructure complète fournie"
+      - "Au cœur d'un resort de prestige"
+    ideal_for: "Architectes, designers, propriétaires avec vision précise"

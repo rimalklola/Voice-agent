@@ -1,0 +1,356 @@
+version: 1
+sources:
+- data/docs/general_information.csv
+- data/docs/info.txt
+- /mnt/data/general_information.csv
+metadata:
+  disclaimer: Informations officielles Alma Resort à confirmer auprès de l'équipe
+    commerciale en cas de doute.
+sections:
+- id: location
+  label: Localisation et accès
+  aliases:
+  - localisation
+  - adresse
+  - emplacement
+  - accès
+  - access
+  entries:
+  - id: exact_location
+    label: Localisation exacte
+    aliases:
+    - adresse
+    - localisation
+    - emplacement
+    - où
+    - situe
+    text: 'Alma Resort se situe à Tanger, quartier Cap Malabata, à côté de Mnar Park
+      et de l''aquaparc. L''entrée principale fait face au restaurant Casitillo, à
+      environ 7 minutes de la gare LGV Tanger et le long de la route nationale N16.
+      Localisation Maps: https://maps.app.goo.gl/gVyu6NH7m5J1WAKE9.
+
+      '
+  - id: road_directions
+    label: Itinéraire routier
+    aliases:
+    - accès
+    - directions
+    - route
+    text: 'Depuis la corniche, dépassez Ghandouri puis prenez la N16 direction Cap
+      Malabata. Après environ 3 km, l''aquaparc apparaît; tournez à gauche au rond-point
+      et suivez la signalétique Alma Resort jusqu''au bureau de vente.
+
+      '
+  - id: transport_links
+    label: Connexions nationales
+    aliases:
+    - connexions
+    - transport
+    - lgv
+    - port
+    text: 'La destination profite de la LGV Tanger–Casablanca (2 h+), d''une future
+      extension vers Marrakech, des ports Tanger Ville↔Tarifa et Tanger Med↔Algeciras,
+      ainsi que de l''aéroport de Tanger pour les liaisons Europe. Autoroutes vers
+      Rabat, Casablanca, Marrakech et Agadir accessibles rapidement.
+
+      '
+- id: project_overview
+  label: Projet & développement
+  aliases:
+  - projet
+  - description
+  - composition
+  entries:
+  - id: description
+    label: Description du projet
+    aliases:
+    - description
+    - resume
+    text: 'Alma Resort est un domaine face mer regroupant un hôtel 5*, des appartements
+      RIPT meublés, des résidences privées, des villas premium et 93 lots à bâtir.
+      L''offre associe prestations hôtelières Soho Boutique, Alma Club, plage aménagée
+      et services premium.
+
+      '
+  - id: composition
+    label: Consistance
+    aliases:
+    - consistance
+    - composition
+    - programme
+    text: 'Le programme comprend quatre familles: appartements RIPT gérés, résidences
+      privées libres, villas isolées (Type 1 à 3) et lots en bande ou jumelés. Chaque
+      typologie bénéficie d''un parking titré et d''un accès direct aux espaces loisirs
+      (club, plage, chiringuito).
+
+      '
+  - id: developers
+    label: Promoteurs & partenaires
+    aliases:
+    - promoteurs
+    - partenaires
+    - investisseurs
+    text: 'Le projet est porté par A. Lazrak Immobilier, Standard LYS et Urbat Maroc,
+      développeurs marocains référents (Costamar Martil, Cléblanche Rabat Souissi,
+      Les Zénith Casablanca…).
+
+      '
+  - id: architects
+    label: Architectes
+    aliases:
+    - architectes
+    - conception
+    text: 'Les architectes Jawad Mesmoudi et Younes Diouri signent la conception,
+      avec des références reconnues à l''échelle nationale.
+
+      '
+  - id: hotel_operator
+    label: Gestion hôtelière
+    aliases:
+    - gestionnaire
+    - soho
+    - hotel
+    text: 'L''exploitation hôtelière est assurée par Soho Boutique Hotels (54 chambres
+      dont 4 suites). Les résidents profitent du restaurant panoramique, bar, piscine
+      à débordement, spa, fitness et services 5*.
+
+      '
+  - id: progress
+    label: Avancement & livraisons
+    aliases:
+    - avancement
+    - livraison
+    - chantier
+    text: 'Les travaux sont lancés avec cadence accélérée: lotissement livré fin décembre
+      2025; hôtel, appartements et villas front de mer livrés septembre 2027.
+
+      '
+- id: legal
+  label: Cadre légal & gouvernance
+  aliases:
+  - legal
+  - juridique
+  - autorisations
+  entries:
+  - id: construction_permit
+    label: Autorisation de construire
+    aliases:
+    - autorisation construire
+    - permis
+    text: 'Le projet dispose de l''ensemble des autorisations de construire nécessaires.
+
+      '
+  - id: lotting_permit
+    label: Autorisation de lotir
+    aliases:
+    - autorisation lotir
+    text: 'Le lotissement est officiellement autorisé, permettant la commercialisation
+      des lots.
+
+      '
+  - id: security_rules
+    label: Sécurité & contrôle
+    aliases:
+    - sécurité
+    - controle accès
+    text: 'Résidence fermée et sécurisée réservée aux acquéreurs et clients de l''hôtel,
+      avec contrôle d''accès dédié installé à l''entrée du site.
+
+      '
+  - id: copro_rules
+    label: Règlement de copropriété
+    aliases:
+    - reglement
+    - copropriété
+    text: 'Un règlement intérieur détaillé encadre la gestion durable: collecte des
+      déchets, validation des plans par le conseil syndical avant permis, obligation
+      de quitus du syndic avant travaux ou cession.
+
+      '
+  - id: syndic_fees
+    label: Frais de syndic
+    aliases:
+    - frais syndic
+    - budget fonctionnement
+    text: 'Le budget de fonctionnement n''est pas encore arrêté; une société de gestion
+      privée soumettra annuellement le budget aux copropriétaires pour vote.
+
+      '
+  - id: price_declaration
+    label: Déclaration des prix
+    aliases:
+    - prix déclarés
+    text: 'Les prix sont 100 % déclarés dans les actes officiels.
+
+      '
+- id: lifestyle
+  label: Vie sur site
+  aliases:
+  - services
+  - loisirs
+  - nature
+  entries:
+  - id: amenities
+    label: Services & loisirs
+    aliases:
+    - services
+    - équipements
+    - loisirs
+    text: 'Alma Club propose piscine couverte, spa, hammam, fitness, restaurants face
+      mer, padel, aire enfants et amphithéâtre végétal. Un chiringuito et la plage
+      aménagée complètent l''expérience.
+
+      '
+  - id: green_spaces
+    label: Espaces verts
+    aliases:
+    - espaces verts
+    - nature
+    text: 'Le projet intègre 3 hectares d''espaces paysagers conservés, cheminements
+      piétons et jardins partagés (pins parasols, caroubiers, chênes verts) reliant
+      les résidences à la mer.
+
+      '
+  - id: sea_access
+    label: Accès mer & zone récréative
+    aliases:
+    - accès mer
+    - plage
+    text: 'Accès direct à la mer avec plage aménagée, ponton plongeoir et équipements
+      balnéaires réservés aux résidents.
+
+      '
+- id: commercial
+  label: Commercialisation
+  aliases:
+  - vente
+  - commercialisation
+  entries:
+  - id: brochure
+    label: Brochure
+    aliases:
+    - brochure
+    - documentation
+    text: 'Une brochure détaillée peut être envoyée par WhatsApp ou email sur simple
+      demande.
+
+      '
+  - id: visits
+    label: Visites
+    aliases:
+    - visite
+    - showroom
+    text: 'Les visites sont ouvertes: un showroom sur site accueille les prospects
+      et des rendez-vous peuvent être planifiés.
+
+      '
+  - id: sales_locations
+    label: Lieux de vente
+    aliases:
+    - lieu ventes
+    - bureau
+    text: 'Signature possible sur site au showroom ou au siège de Casablanca (sur
+      rendez-vous).
+
+      '
+  - id: sales_office
+    label: Bureau de vente
+    aliases:
+    - bureau vente
+    text: 'Le bureau de vente sur site est opérationnel; partager la localisation
+      via WhatsApp si besoin.
+
+      '
+  - id: contacts
+    label: Contacts officiels
+    aliases:
+    - contact
+    - téléphone
+    - email
+    text: 'Téléphone: +212 522 774 169. Email: contact@almaresort.ma. Site: almaresort.ma.
+
+      '
+- id: location_access
+  label: Localisation & Accès
+  aliases:
+  - localisation
+  - accès
+  - access
+  entries:
+  - id: how_to_get_there
+    label: Comment s'y rendre
+    aliases: []
+    text: "• le projet est situé à Tanger dans le quartier Cap Malabata, mitoyen au\
+      \ Mnar et à l'aquaparc\nEn face du restaurant Casitillo \nIl est à 7 mn de la\
+      \ gare de Tanger \nsur la route nationale N16\nhttps://maps.app.goo.gl/gVyu6NH7m5J1WAKE9\n\
+      • dépasser la zone ghandouri et prendre la route nationale N16, à environ 3\
+      \ km, vous verrez l'aquapark, juste après il y a un rond point, il faudra tourner\
+      \ à gauche, vous trouverez la signalétique du projet qui mène jusqu'au bureau\
+      \ de vente"
+- id: permits_status
+  label: Projet & Autorisations
+  aliases:
+  - permis
+  - autorisations
+  entries:
+  - id: permits_timeline
+    label: Autorisations & Planning
+    aliases: []
+    text: '• le projet a obtenu toutes les autorisations de construire nécessaire
+
+      • le projet est autorisé
+
+      • les travaux ont démarré et suivent une cadence accélérée, le lotissement sera
+      livré fin décembre 2025 et toutes les constructionsà savoir l''hôtel, les appartements
+      et les villas en front mer seront livrées en septembre 2027'
+- id: stakeholders
+  label: Promoteurs & Partenaires
+  aliases:
+  - promoteurs
+  - investisseurs
+  entries:
+  - id: developers
+    label: Développeur & opérateur
+    aliases: []
+    text: • Le projet est développé est géré par le groupement A.Lazrak immobilier,
+      Standard LYS et Urbat Maroc, spécialistes de développement de projet au Maroc
+      avec beaucoup de références nationales, exemple projet Costamar à Martil, Cléblanche
+      à Rabat Souissi, les Zenith à Casablanca et bien d'autres
+- id: site_life
+  label: Vie & Sécurité
+  aliases:
+  - sécurité
+  - vie
+  entries:
+  - id: security_nature
+    label: Sécurité & Nature
+    aliases: []
+    text: '• le projet a été concue comme une résidence fermée et sécurisée, seuls
+      les acquéreurs et clients de l''hôtel auront un accès au site
+
+      Le projet dispose d''un contrôle à l''accés qui sera construit à l''entrée du
+      site
+
+      • piocher les informations de la brochure, parler du club Alma et ses activités,
+      parler aussi de la zone récréative qui fait 3 ha avec nature conservée et accés
+      à la mer aménagé
+
+      • le projet dispose d''un accés direct à la mer, un aménagement sera réalisé
+      en plage artificielle, ponton plongeoire, un chiringuito pour la détente et
+      profiter de la vue exceptionnelle'
+- id: amenities
+  label: Services & Équipements
+  aliases:
+  - services
+  - équipements
+  entries:
+  - id: amenities_overview
+    label: Équipements de loisirs
+    aliases: []
+    text: • Prendre les informations de la brochure
+- id: commercial_terms
+  label: Conditions commerciales
+  aliases:
+  - commercial
+  - conditions
+  entries: []

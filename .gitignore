@@ -1,0 +1,40 @@
+# Python / FastAPI / venv
+__pycache__/
+*.py[cod]
+*.pyo
+.pytest_cache/
+.venv/
+
+# Env and secrets
+.env
+.env.*
+!/.env.example
+
+# OS / tooling
+.DS_Store
+*.log
+*.swp
+*.swo
+
+# Local artifacts
+/tmp/
+dist/
+app/prompts/alma_few_shots.json
+app/prompts/alma_system_prompt.txt
+
+# LanceDB data
+data/lancedb/
+data/lancedb_test*/
+
+# Runtime monitoring artifacts
+data/monitoring/*.sqlite3
+data/monitoring/*.sqlite3-*
+data/monitoring/pilot_calls.csv
+data/monitoring/transcripts/transcripts_index.csv
+data/monitoring/transcripts/calls/*.json
+
+# SentenceTransformers cache
+cache/
+**/.cache/
+**/models/
+**/sentence_transformers/

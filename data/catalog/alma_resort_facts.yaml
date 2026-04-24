@@ -1,0 +1,147 @@
+project:
+  official_name: "Alma Resort"
+  tagline: "Projet d'exception en front de mer situé sur l'une des plus belles baies de Tanger"
+  subtitle: "Accès direct à la crique exclusive réservée aux résidents"
+  description: "Alma Resort est un projet d'exception en front de mer, situé sur l'une des plus belles baies de Tanger. Il se compose de villas exclusives, de lots de terrains, d'appartements premium et un hôtel 5* signé Soho Boutique Hoteles"
+
+location:
+  city: "Tanger"
+  bay: "Baie de Tanger"
+  area: "Cap Malabata"
+  specific_route: "Route de Mnar, côté Malabata"
+  nearby_landmarks:
+    - "Mitoyen au Mnar"
+    - "En face du restaurant Casitillo"
+    - "7 minutes de la gare de Tanger"
+    - "Route nationale N16"
+  access_instructions: "Dépasser la zone Ghandouri et prendre la route N16, à environ 3 km vous verrez l'aquaparc, juste après le rond-point tournez à gauche vers la signalétique du projet"
+  map_link: "https://maps.app.goo.gl/gVyu6NH7m5J1WAKE9"
+
+architects:
+  - name: "Jaouad El Mesmoudi"
+    credentials: "Architecte renommé avec références nationales et internationales"
+  - name: "Younes Dioui"
+    credentials: "Architecte renommé avec références nationales et internationales"
+  note: "Ces deux architectes ont conçu des projets prestigieux reconnus à l'échelle nationale"
+
+hotel_partner:
+  name: "Soho Boutique Hoteles"
+  star_rating: "5*"
+  rooms: 54
+  suites: 4
+  facilities:
+    - "Restaurant avec terrasse"
+    - "Bar"
+    - "Piscine à débordement"
+
+developers:
+  grouping_name: "Groupement A.Lazrak Immobilier, Standard LYS, Urbat Maroc"
+  specialties: "Spécialistes du développement de projets immobiliers au Maroc"
+  notable_projects:
+    - "Costamar à Martil"
+    - "Cléblanche à Rabat Souissi"
+    - "Les Zenith à Casablanca"
+
+approvals:
+  construction: "Autorisation de construire obtenue"
+  zoning: "Autorisation de lotir obtenue"
+
+timeline:
+  site_plan_delivery: "Décembre 2025"
+  hotel_apartments_villas_delivery: "Septembre 2027"
+  status: "Travaux en cours et suivent une cadence accélérée, conformément au planning"
+  model_apartment_ready: "Été 2026"
+
+contact:
+  phone: "+212 522 774 169"
+  email: "contact@almaresort.ma"
+  website: "almaresort.ma"
+  showroom_location: "Sur le site avec vue sur la baie de Tanger"
+  sales_office_hours:
+    monday_to_saturday: "10h-18h"
+    sunday: "Fermé"
+    note: "Le bureau de vente est également disponible à Casablanca sur rendez-vous"
+
+amenities:
+  total_count: 10
+  list:
+    - "Crique exclusive réservée aux résidents"
+    - "Club house avec spa"
+    - "Hammam"
+    - "Salle de sport/Fitness"
+    - "Restaurants internationaux face mer"
+    - "Courts de padel"
+    - "Aire de jeux pour enfants"
+    - "Hôtel 5* Soho Boutique Hoteles"
+    - "Piscine couverte et piscines à débordement"
+    - "Plage aménagée avec ponton, plongeoir et chiringuito"
+  beach_amenities: "Aménagement en plage artificielle, ponton plongeoir, chiringuito pour détente avec vue exceptionnelle"
+
+beach_and_cove:
+  access: "Accès direct à la mer, exclusivement pour les résidents"
+  cove: "Crique exclusive aménagée pour baignade"
+  beach: "Plage artificielle aménagée"
+  features:
+    - "Ponton plongeoir"
+    - "Chiringuito"
+    - "Zone récréative de 3 ha avec nature conservée"
+
+security:
+  type: "Résidence fermée et sécurisée"
+  access_policy: "Seuls les acquéreurs et clients de l'hôtel auront accès au site"
+  entrance_control: "Contrôle d'accès à l'entrée du site"
+
+green_spaces:
+  recreational_area: "3 hectares de zone récréative avec nature conservée"
+  landscaping: "Allées arborées, jardins paysagers"
+  vegetation: "Pins parasols, caroubiers, chênes verts"
+  pedestrian_paths: "Cheminements vers la plage et espaces verts"
+
+pricing_information:
+  note: "Tous les prix sont 100% déclarés. Pour détails précis et offres actuelles, contactez l'équipe commerciale"
+  apartments_ript_starting: "À partir de 1,3M DH (F1)"
+  apartments_ript_average: "2,3M DH (F2), 3,6M DH (F3)"
+  apartments_private_custom: "Sur demande"
+  villas_starting: "À partir de 20M DH (Type 1)"
+  villas_premium: "35M DH (Type 2)"
+  villas_mid_range: "25-30M DH (Type 3)"
+  terrain_bands: "À partir de 3,2M DH (terrain en bande)"
+  terrain_semi_detached: "À partir de 5,3M DH (terrain jumelé)"
+  terrain_price_per_sqm_band: "18 000 DH/m²"
+  terrain_price_per_sqm_semi: "16 000 DH/m²"
+
+payment_terms:
+  apartments_ript: "30% réservation, 20% fin gros œuvre, reste livraison"
+  apartments_private: "30% réservation, 20% fin gros œuvre, reste livraison"
+  villas: "30% réservation, 20% fin gros œuvre, reste livraison"
+  terrain_bands: "50% avance réservation, 50% livraison décembre 2025"
+  terrain_semi: "50% avance réservation, 50% livraison décembre 2025"
+  contract_type_apartments_villas: "Contrat de réservation sous seing privé"
+  contract_type_terrain: "Demande de mise en option"
+  vefa_status: "VEFA n'a pas encore été mise en place. Pour plus d'infos, contactez l'équipe commerciale"
+
+property_management:
+  syndic_management: "Gérée par une société privée"
+  budget_determination: "À déterminer par vote annuel lors de l'assemblée générale"
+  owner_participation: "Les propriétaires votent chaque année sur le budget de fonctionnement"
+
+condo_regulations:
+  established: "Oui, un règlement de copropriété précis a été élaboré"
+  purpose: "Garantir une gestion parfaite et durable du site"
+  example_provisions:
+    - "Règles de collecte des déchets"
+    - "Droit au conseil syndical de donner avis sur les plans avant autorisation"
+    - "Obligation de présentation d'un quitus du syndic avant construction ou vente"
+  contact_for_details: "Pour plus de détails, contactez l'équipe commerciale"
+
+documentation:
+  available: "Oui, une brochure détaillée expose tous les aspects du projet"
+  delivery_method: "WhatsApp ou email"
+
+site_visits:
+  available: "Oui"
+  location: "Showroom sur le site"
+  appointment_required: "Oui, contactez-nous pour prendre rendez-vous"
+  appointments_available: "Lundi-Samedi 10h-18h"
+
+key_message_for_agent: "Alma Resort est UN PROJET EN FRONT DE MER avec ACCÈS DIRECT À UNE CRIQUE EXCLUSIVE - ce sont nos deux principaux atouts. Mentionner cette spécificité dans pratiquement chaque réponse."

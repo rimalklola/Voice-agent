@@ -1,0 +1,837 @@
+version: 1
+sources:
+- data/docs/appartements.csv
+- data/docs/villa.csv
+- data/docs/lot_de_terrains.csv
+metadata:
+  disclaimer: Surfaces et attributs indicatifs issus des supports Alma Resort. Confirmer
+    avec l'équipe commerciale avant toute décision.
+categories:
+- id: apartments_ript
+  label: Appartements RIPT
+  type: apartment
+  aliases:
+  - ript
+  - appartements meublés
+  description: Appartements meublés face mer, exploités sous bail hôtelier Soho Boutique
+    avec 50 jours d'occupation propriétaire.
+  notes: Chaque lot inclut une place de parking titrée et l'accès aux services hôteliers
+    premium.
+  variants:
+  - id: f1
+    label: F1 RIPT
+    aliases:
+    - f1
+    - t1
+    - studio
+    bedrooms: 1
+    attributes:
+      interior_area_m2:
+        label: Surface intérieure
+        min: 30
+        max: 40
+        unit: m²
+      terrace_area_m2:
+        label: Terrasse
+        min: 20
+        max: 30
+        unit: m²
+      occupancy_days:
+        label: Jours d'occupation/an
+        value: 50
+        unit: jours
+        note: D'après le statut RIPT.
+      typology_note:
+        label: Consistance/ catégorie/ type
+        value: la résidence est composée d'appartements de différents types, on a
+          du F1, F2 ou F3
+      price_per_m2_mad:
+        label: Prix au m²
+        value: 32000.0
+        unit: MAD/m²
+        note: on est à 32000 DH/m², place de parking incluse
+      payment_terms:
+        label: Modalités de réservation
+        value: 30% à la réservation, 20% à la fin des travaux gros œuvres et le reste
+          à la livraison
+      contract_type:
+        label: Contrat
+        value: c'est un contrat de réservation sous seing privé
+      vefa_status:
+        label: VEFA
+        value: la VEFA n'a pas encore été mise en place mais pour plus d'informations
+          je peux vous mettre en relation avec l'équipe commerciale
+      parking:
+        label: Parking
+        value: Charque appartement dispose d'une place de parking titrée au sous sol
+      furnished:
+        label: Ameublement
+        value: chaque appartement sera livrée meublé aux standard du gestionnaire
+      price_mad:
+        label: Budget indicatif
+        value: 1300000.0
+        unit: MAD
+        note: 'en fonction des surfaces, il varie pour: les F1 entre 1,3 MDH et 1,8
+          MDH Les F2, on est sur une moyenne de 2,3 Mdh Et pour les F3 on est sur
+          une moyenne de 3,6 mdh'
+      view:
+        label: vue mer / vis-à-vis
+        value: tous les appartements auront une vue panoramique sur la baie de tanger,
+          quelques rares exceptions, il faudra les voir avec le commercial
+      availability:
+        label: Disponibilité
+        value: La vente est réalisée sur plan, la date de livraison est prévue en
+          septembre 2027
+      finishes:
+        label: Finitions
+        value: lil s'agit de finition de tres haut standing, les commerciaux disposent
+          d'une note technique détaillée avec les matériaux à utiliser, ils vous donneront
+          plus de détail, souhaitez être contacter par un commercial
+      hoa_charges:
+        label: Charges de copropriété
+        value: parmi les avantages de l'achat dans les résidences RIPT, c'est que
+          l'acquéreur sera dispensé de toutes les charges de copropriété pendant 9
+          ans
+      show_flat:
+        label: Appartement témoin
+        value: pas encore, nous avons un objectif d'avoir un appartement témoin disponible
+          vers la fin de 2026
+  - id: f2
+    label: F2 RIPT
+    aliases:
+    - f2
+    bedrooms: 1
+    attributes:
+      interior_area_m2:
+        label: Surface intérieure
+        value: 50
+        unit: m²
+      terrace_area_m2:
+        label: Terrasse
+        min: 20
+        max: 30
+        unit: m²
+      occupancy_days:
+        label: Jours d'occupation/an
+        value: 50
+        unit: jours
+      typology_note:
+        label: Consistance/ catégorie/ type
+        value: la résidence est composée d'appartements de différents types, on a
+          du F1, F2 ou F3
+      price_per_m2_mad:
+        label: Prix au m²
+        value: 32000.0
+        unit: MAD/m²
+        note: on est à 32000 DH/m², place de parking incluse
+      payment_terms:
+        label: Modalités de réservation
+        value: 30% à la réservation, 20% à la fin des travaux gros œuvres et le reste
+          à la livraison
+      contract_type:
+        label: Contrat
+        value: c'est un contrat de réservation sous seing privé
+      vefa_status:
+        label: VEFA
+        value: la VEFA n'a pas encore été mise en place mais pour plus d'informations
+          je peux vous mettre en relation avec l'équipe commerciale
+      bedrooms:
+        label: Chambres
+        value: 1
+      parking:
+        label: Parking
+        value: Charque appartement dispose d'une place de parking titrée au sous sol
+      furnished:
+        label: Ameublement
+        value: chaque appartement sera livrée meublé aux standard du gestionnaire
+      view:
+        label: vue mer / vis-à-vis
+        value: tous les appartements auront une vue panoramique sur la baie de tanger,
+          quelques rares exceptions, il faudra les voir avec le commercial
+      availability:
+        label: Disponibilité
+        value: La vente est réalisée sur plan, la date de livraison est prévue en
+          septembre 2027
+      finishes:
+        label: Finitions
+        value: lil s'agit de finition de tres haut standing, les commerciaux disposent
+          d'une note technique détaillée avec les matériaux à utiliser, ils vous donneront
+          plus de détail, souhaitez être contacter par un commercial
+      hoa_charges:
+        label: Charges de copropriété
+        value: parmi les avantages de l'achat dans les résidences RIPT, c'est que
+          l'acquéreur sera dispensé de toutes les charges de copropriété pendant 9
+          ans
+      show_flat:
+        label: Appartement témoin
+        value: pas encore, nous avons un objectif d'avoir un appartement témoin disponible
+          vers la fin de 2026
+  - id: f3
+    label: F3 RIPT
+    aliases:
+    - f3
+    bedrooms: 2
+    attributes:
+      interior_area_m2:
+        label: Surface intérieure
+        min: 85
+        max: 100
+        unit: m²
+      terrace_area_m2:
+        label: Terrasse
+        min: 20
+        max: 30
+        unit: m²
+      occupancy_days:
+        label: Jours d'occupation/an
+        value: 50
+        unit: jours
+      typology_note:
+        label: Consistance/ catégorie/ type
+        value: la résidence est composée d'appartements de différents types, on a
+          du F1, F2 ou F3
+      price_per_m2_mad:
+        label: Prix au m²
+        value: 32000.0
+        unit: MAD/m²
+        note: on est à 32000 DH/m², place de parking incluse
+      payment_terms:
+        label: Modalités de réservation
+        value: 30% à la réservation, 20% à la fin des travaux gros œuvres et le reste
+          à la livraison
+      contract_type:
+        label: Contrat
+        value: c'est un contrat de réservation sous seing privé
+      vefa_status:
+        label: VEFA
+        value: la VEFA n'a pas encore été mise en place mais pour plus d'informations
+          je peux vous mettre en relation avec l'équipe commerciale
+      bedrooms:
+        label: Chambres
+        value: 2
+      parking:
+        label: Parking
+        value: Charque appartement dispose d'une place de parking titrée au sous sol
+      furnished:
+        label: Ameublement
+        value: chaque appartement sera livrée meublé aux standard du gestionnaire
+      price_mad:
+        label: Budget indicatif
+        value: 3600000.0
+        unit: MAD
+        note: 'en fonction des surfaces, il varie pour: les F1 entre 1,3 MDH et 1,8
+          MDH Les F2, on est sur une moyenne de 2,3 Mdh Et pour les F3 on est sur
+          une moyenne de 3,6 mdh'
+      view:
+        label: vue mer / vis-à-vis
+        value: tous les appartements auront une vue panoramique sur la baie de tanger,
+          quelques rares exceptions, il faudra les voir avec le commercial
+      availability:
+        label: Disponibilité
+        value: La vente est réalisée sur plan, la date de livraison est prévue en
+          septembre 2027
+      finishes:
+        label: Finitions
+        value: lil s'agit de finition de tres haut standing, les commerciaux disposent
+          d'une note technique détaillée avec les matériaux à utiliser, ils vous donneront
+          plus de détail, souhaitez être contacter par un commercial
+      hoa_charges:
+        label: Charges de copropriété
+        value: parmi les avantages de l'achat dans les résidences RIPT, c'est que
+          l'acquéreur sera dispensé de toutes les charges de copropriété pendant 9
+          ans
+      show_flat:
+        label: Appartement témoin
+        value: pas encore, nous avons un objectif d'avoir un appartement témoin disponible
+          vers la fin de 2026
+- id: apartments_residence
+  label: Résidences privées
+  type: apartment
+  aliases:
+  - résidences
+  - résidence privée
+  - appartements privés
+  description: Appartements libres (copropriété classique) avec grandes terrasses
+    sur la baie et accès Alma Club.
+  notes: Chaque appartement dispose d'une place de parking titrée; 2 duplex rez-de-jardin
+    possèdent piscine et jardin privés.
+  variants:
+  - id: f2
+    label: F2 Résidence
+    aliases:
+    - f2
+    bedrooms: 1
+    attributes:
+      interior_area_m2:
+        label: Surface intérieure
+        value: 50
+        unit: m²
+      terrace_area_m2:
+        label: Terrasse
+        min: 20
+        max: 40
+        unit: m²
+      price_per_m2_mad:
+        label: Prix au m²
+        value: 35000.0
+        unit: MAD/m²
+        note: on est à 35000 DH/m², place de parking incluse et les terrasses sont
+          à moitié prix
+      contract_type:
+        label: Contrat
+        value: c'est un contrat de réservation sous seing privé
+      vefa_status:
+        label: VEFA
+        value: la VEFA n'a pas encore été mise en place mais pour plus d'informations
+          je peux vous mettre en relation avec l'équipe commerciale
+      parking:
+        label: Parking
+        value: Charque appartement dispose d'une place de parking titrée au sous sol
+      furnished:
+        label: Ameublement
+        value: non les appartements ne seront pas meublés, ils seront meublés sur
+          les résidences RIPT seulement
+      availability:
+        label: Disponibilité
+        value: La vente est réalisée sur plan, la date de livraison est prévue en
+          septembre 2027
+      hoa_charges:
+        label: Charges de copropriété
+        value: pour le moment, le budget de fonctionnement n'a pas été détérminé par
+          ailleurs, la résidence sera géré par une société privée qui se chargera
+          annuelement de présenter le budget annuel aux acquéreurs
+  - id: f3
+    label: F3 Résidence
+    aliases:
+    - f3
+    bedrooms: 2
+    attributes:
+      interior_area_m2:
+        label: Surface intérieure
+        min: 85
+        max: 100
+        unit: m²
+      terrace_area_m2:
+        label: Terrasse
+        min: 20
+        max: 40
+        unit: m²
+      price_per_m2_mad:
+        label: Prix au m²
+        value: 35000.0
+        unit: MAD/m²
+        note: on est à 35000 DH/m², place de parking incluse et les terrasses sont
+          à moitié prix
+      contract_type:
+        label: Contrat
+        value: c'est un contrat de réservation sous seing privé
+      vefa_status:
+        label: VEFA
+        value: la VEFA n'a pas encore été mise en place mais pour plus d'informations
+          je peux vous mettre en relation avec l'équipe commerciale
+      parking:
+        label: Parking
+        value: Charque appartement dispose d'une place de parking titrée au sous sol
+      furnished:
+        label: Ameublement
+        value: non les appartements ne seront pas meublés, ils seront meublés sur
+          les résidences RIPT seulement
+      price_mad:
+        label: Budget indicatif
+        unit: MAD
+        min: 3500000.0
+        max: 5000000.0
+        note: 'en fonction des surfaces, il varie pour: les F2 entre 2,1 MDH et 2,6
+          MDH les F3 entre 3,5 MDH et 5 MDH Et pour les F4 entre 5,3 MDH et 7 MDH'
+      availability:
+        label: Disponibilité
+        value: La vente est réalisée sur plan, la date de livraison est prévue en
+          septembre 2027
+      hoa_charges:
+        label: Charges de copropriété
+        value: pour le moment, le budget de fonctionnement n'a pas été détérminé par
+          ailleurs, la résidence sera géré par une société privée qui se chargera
+          annuelement de présenter le budget annuel aux acquéreurs
+  - id: f4
+    label: F4 Résidence
+    aliases:
+    - f4
+    bedrooms: 3
+    attributes:
+      interior_area_m2:
+        label: Surface intérieure
+        min: 110
+        max: 150
+        unit: m²
+      terrace_area_m2:
+        label: Terrasse
+        min: 20
+        max: 40
+        unit: m²
+      price_per_m2_mad:
+        label: Prix au m²
+        value: 35000.0
+        unit: MAD/m²
+        note: on est à 35000 DH/m², place de parking incluse et les terrasses sont
+          à moitié prix
+      contract_type:
+        label: Contrat
+        value: c'est un contrat de réservation sous seing privé
+      vefa_status:
+        label: VEFA
+        value: la VEFA n'a pas encore été mise en place mais pour plus d'informations
+          je peux vous mettre en relation avec l'équipe commerciale
+      parking:
+        label: Parking
+        value: Charque appartement dispose d'une place de parking titrée au sous sol
+      furnished:
+        label: Ameublement
+        value: non les appartements ne seront pas meublés, ils seront meublés sur
+          les résidences RIPT seulement
+      price_mad:
+        label: Budget indicatif
+        unit: MAD
+        min: 5300000.0
+        max: 7000000.0
+        note: 'en fonction des surfaces, il varie pour: les F2 entre 2,1 MDH et 2,6
+          MDH les F3 entre 3,5 MDH et 5 MDH Et pour les F4 entre 5,3 MDH et 7 MDH'
+      availability:
+        label: Disponibilité
+        value: La vente est réalisée sur plan, la date de livraison est prévue en
+          septembre 2027
+      hoa_charges:
+        label: Charges de copropriété
+        value: pour le moment, le budget de fonctionnement n'a pas été détérminé par
+          ailleurs, la résidence sera géré par une société privée qui se chargera
+          annuelement de présenter le budget annuel aux acquéreurs
+  - id: f4_duplex
+    label: F4 Duplex Résidence
+    aliases:
+    - f4
+    - duplex
+    bedrooms: 4
+    attributes:
+      interior_area_m2:
+        label: Surface intérieure
+        value: 195
+        unit: m²
+      terrace_area_m2:
+        label: Terrasse
+        min: 50
+        max: 70
+        unit: m²
+      garden_area_m2:
+        label: Jardin
+        value: 24
+        unit: m²
+      price_per_m2_mad:
+        label: Prix au m²
+        value: 35000.0
+        unit: MAD/m²
+        note: on est à 35000 DH/m², place de parking incluse et les terrasses sont
+          à moitié prix
+      contract_type:
+        label: Contrat
+        value: c'est un contrat de réservation sous seing privé
+      vefa_status:
+        label: VEFA
+        value: la VEFA n'a pas encore été mise en place mais pour plus d'informations
+          je peux vous mettre en relation avec l'équipe commerciale
+      parking:
+        label: Parking
+        value: Charque appartement dispose d'une place de parking titrée au sous sol
+      furnished:
+        label: Ameublement
+        value: non les appartements ne seront pas meublés, ils seront meublés sur
+          les résidences RIPT seulement
+      availability:
+        label: Disponibilité
+        value: La vente est réalisée sur plan, la date de livraison est prévue en
+          septembre 2027
+      hoa_charges:
+        label: Charges de copropriété
+        value: pour le moment, le budget de fonctionnement n'a pas été détérminé par
+          ailleurs, la résidence sera géré par une société privée qui se chargera
+          annuelement de présenter le budget annuel aux acquéreurs
+- id: villas_premium
+  label: Villas premium
+  type: villa
+  aliases:
+  - villas
+  - villa premium
+  description: Villas isolées face mer avec piscines à débordement, finitions haut
+    de gamme et services Alma Resort.
+  notes: Chaque villa dispose de sous-sol technique, stationnement privé et prestations
+    personnalisables via le commercial.
+  variants:
+  - id: type1
+    label: Villa Type 1
+    aliases:
+    - t1
+    - type1
+    bedrooms: 4
+    suites: 4
+    attributes:
+      plot_area_m2:
+        label: Parcelle
+        min: 500
+        max: 600
+        unit: m²
+        note: de 500 à 600 m²
+      built_area_m2:
+        label: Surface construite
+        value: 650
+        unit: m²
+        min: 650.0
+        max: 650.0
+        note: 650 m² de surfaces planchers
+      pool_type:
+        label: Piscine
+        value: Piscine privée à débordement en toiture
+      bedrooms:
+        label: Chambres
+        value: 4
+      price_mad:
+        label: Prix
+        value: 20000000.0
+        unit: MAD
+        note: le prix est de 20 MDH
+      payment_terms:
+        label: Modalités de paiement
+        value: 30% à la réservation, 20% à la fin des travaux gros œuvres et le reste
+          à la livraison
+      contract_type:
+        label: Contrat
+        value: c'est un contrat de réservation sous seing privé
+      vefa_status:
+        label: VEFA
+        value: la VEFA n'a pas encore été mise en place mais pour plus d'informations
+          je peux vous mettre en relation avec l'équipe commerciale
+      view:
+        label: Vue
+        value: Chaque villa bénéficie d’une vue mer panoramique embrassant toute la
+          baie de Tanger offrant un spectacle naturel unique à toute heure de la journée.
+      parking_garage:
+        label: Parking/Garage
+        value: la villa dispose d'un très grand parking au sous sol pouvant acueillir
+          plus de 3 voitures, il dispose également d'un grand dortoir pour le personnel
+          et 3 locaux techniques et boxes
+      finishes:
+        label: Finitions
+        value: Bois massif, marbre italien, pierre blonde, cuisine équipée et finitions
+          élégantes et très haut de gamme dans toutes les pièces, les commerciaux
+          disposent d'une note technique détaillée avec les matériaux à utiliser,
+          ils vous donneront plus de détail, souhaitez être contacter par un commercial
+      detached_or_semi:
+        label: Implantation
+        value: Les villas sont isolées offrant ainsi à chaque résident une intimité
+          préservée, un confort acoustique optimal et une atmosphère paisible au cœur
+          d’un cadre naturel raffiné.
+      customization:
+        label: Personnalisation
+        value: Le design des villas a été conçu par des architectes renommés, dotés
+          de références nationales et internationales, afin de garantir une finition
+          raffinée et un standing élevé. Il faudra discuter cette question avec nos
+          commerciaux qui pourront vous donner plus de détail
+      availability:
+        label: Disponibilité
+        value: La vente est réalisée sur plan, la date de livraison est prévue en
+          septembre 2027
+      delivery_timeline:
+        label: Livraison
+        value: ca sera en septembre 2027
+      hoa_charges:
+        label: Charges de copropriété
+        value: pour le moment, le budget de fonctionnement n'a pas été détérminé par
+          ailleurs, la résidence sera géré par une société privée qui se chargera
+          annuelement de présenter le budget annuel aux acquéreurs
+      price_negotiation:
+        label: Négociation
+        value: A ma connaissance, les prix sont fixes mais pour plus de détails, il
+          faudra consulter un commercial, souhaitez vous que je vous prenes un RDv
+      visit:
+        label: Visite
+        value: nos commerciaux sont disponibles sur site, si vous souhaitez prendre
+          RDV, je peux vous organiser cela
+  - id: type2
+    label: Villa Type 2
+    aliases:
+    - t2
+    - type2
+    bedrooms: 5
+    suites: 5
+    attributes:
+      plot_area_m2:
+        label: Parcelle
+        value: 860
+        unit: m²
+        min: 860.0
+        max: 860.0
+        note: il y a une seule villa de ce type, elle fait 860 m² de terrain
+      built_area_m2:
+        label: Surface construite
+        value: 890
+        unit: m²
+        min: 890.0
+        max: 890.0
+        note: 890 m² de surfaces planchers
+      pool_type:
+        label: Piscine
+        value: Piscine privée à débordement sur les hauteurs
+      bedrooms:
+        label: Chambres
+        value: 5
+      price_mad:
+        label: Prix
+        value: 35000000.0
+        unit: MAD
+        note: le prix est de 35 MDH
+      payment_terms:
+        label: Modalités de paiement
+        value: 30% à la réservation, 20% à la fin des travaux gros œuvres et le reste
+          à la livraison
+      contract_type:
+        label: Contrat
+        value: c'est un contrat de réservation sous seing privé
+      vefa_status:
+        label: VEFA
+        value: la VEFA n'a pas encore été mise en place mais pour plus d'informations
+          je peux vous mettre en relation avec l'équipe commerciale
+      view:
+        label: Vue
+        value: la villa bénéficie d’une vue mer panoramique embrassant toute la baie
+          de Tanger offrant un spectacle naturel unique à toute heure de la journée.
+      parking_garage:
+        label: Parking/Garage
+        value: la villa dispose d'un très grand parking au sous sol pouvant acueillir
+          plus de 5 voitures, il dispose également d'un grand dortoir pour le personnel
+          et des locaux techniques et boxes
+      finishes:
+        label: Finitions
+        value: Bois massif, marbre italien, pierre blonde, cuisine équipée et finitions
+          élégantes et très haut de gamme dans toutes les pièces, les commerciaux
+          disposent d'une note technique détaillée avec les matériaux à utiliser,
+          ils vous donneront plus de détail, souhaitez être contacter par un commercial
+      detached_or_semi:
+        label: Implantation
+        value: la villa est isolée offrant ainsi à chaque résident une intimité préservée,
+          un confort acoustique optimal et une atmosphère paisible au cœur d’un cadre
+          naturel raffiné.
+      customization:
+        label: Personnalisation
+        value: Le design de la villas a été conçue par des architectes renommés, dotés
+          de références nationales et internationales, afin de garantir une finition
+          raffinée et un standing élevé. Il faudra discuter cette question avec nos
+          commerciaux qui pourront vous donner plus de détail
+      availability:
+        label: Disponibilité
+        value: La vente est réalisée sur plan, la date de livraison est prévue en
+          septembre 2027
+      delivery_timeline:
+        label: Livraison
+        value: ca sera en septembre 2027
+      hoa_charges:
+        label: Charges de copropriété
+        value: pour le moment, le budget de fonctionnement n'a pas été détérminé par
+          ailleurs, la résidence sera géré par une société privée qui se chargera
+          annuelement de présenter le budget annuel aux acquéreurs
+      price_negotiation:
+        label: Négociation
+        value: A ma connaissance, les prix sont fixes mais pour plus de détails, il
+          faudra consulter un commercial, souhaitez vous que je vous prenes un RDv
+      visit:
+        label: Visite
+        value: nos commerciaux sont disponibles sur site, si vous souhaitez prendre
+          RDV, je peux vous organiser cela
+  - id: type3
+    label: Villa Type 3
+    aliases:
+    - t3
+    - type3
+    bedrooms: 4
+    suites: 4
+    attributes:
+      plot_area_m2:
+        label: Parcelle
+        min: 720
+        max: 1075
+        unit: m²
+        note: il y a 2 villas de ce type de surfaces de 720 et 1075 m²
+      built_area_m2:
+        label: Surface construite
+        value: 720
+        unit: m²
+        min: 720.0
+        max: 720.0
+        note: 720 m² de surfaces planchers
+      pool_type:
+        label: Piscine
+        value: Piscine privée au niveau du séjour
+      bedrooms:
+        label: Chambres
+        value: 4
+      price_mad:
+        label: Prix
+        value: 30000000.0
+        unit: MAD
+        note: le prix est entre 25 et 30 MDH
+      payment_terms:
+        label: Modalités de paiement
+        value: 30% à la réservation, 20% à la fin des travaux gros œuvres et le reste
+          à la livraison
+      contract_type:
+        label: Contrat
+        value: c'est un contrat de réservation sous seing privé
+      vefa_status:
+        label: VEFA
+        value: la VEFA n'a pas encore été mise en place mais pour plus d'informations
+          je peux vous mettre en relation avec l'équipe commerciale
+      view:
+        label: Vue
+        value: Chaque villa bénéficie d’une vue mer panoramique embrassant toute la
+          baie de Tanger offrant un spectacle naturel unique à toute heure de la journée.
+      parking_garage:
+        label: Parking/Garage
+        value: la villa dispose d'un très grand parking au sous sol pouvant acueillir
+          4 voitures, il dispose également de 2 chambres pour le personnel et 3 locaux
+          techniques et boxes
+      finishes:
+        label: Finitions
+        value: Bois massif, marbre italien, pierre blonde, cuisine équipée et finitions
+          élégantes et très haut de gamme dans toutes les pièces, les commerciaux
+          disposent d'une note technique détaillée avec les matériaux à utiliser,
+          ils vous donneront plus de détail, souhaitez être contacter par un commercial
+      detached_or_semi:
+        label: Implantation
+        value: Les villas sont isolées offrant ainsi à chaque résident une intimité
+          préservée, un confort acoustique optimal et une atmosphère paisible au cœur
+          d’un cadre naturel raffiné.
+      customization:
+        label: Personnalisation
+        value: Le design des villas a été conçu par des architectes renommés, dotés
+          de références nationales et internationales, afin de garantir une finition
+          raffinée et un standing élevé. Il faudra discuter cette question avec nos
+          commerciaux qui pourront vous donner plus de détail
+      availability:
+        label: Disponibilité
+        value: La vente est réalisée sur plan, la date de livraison est prévue en
+          septembre 2027
+      delivery_timeline:
+        label: Livraison
+        value: ca sera en septembre 2027
+      hoa_charges:
+        label: Charges de copropriété
+        value: pour le moment, le budget de fonctionnement n'a pas été détérminé par
+          ailleurs, la résidence sera géré par une société privée qui se chargera
+          annuelement de présenter le budget annuel aux acquéreurs
+      price_negotiation:
+        label: Négociation
+        value: A ma connaissance, les prix sont fixes mais pour plus de détails, il
+          faudra consulter un commercial, souhaitez vous que je vous prenes un RDv
+      visit:
+        label: Visite
+        value: nos commerciaux sont disponibles sur site, si vous souhaitez prendre
+          RDV, je peux vous organiser cela
+- id: villa_lots
+  label: Lots pour villas
+  type: land
+  aliases:
+  - terrains
+  - lots
+  - lotissements
+  description: Lots viabilisés au sein du lotissement Alma Resort, accès sécurisé
+    et cahier des charges précis.
+  notes: Étude architecturale et accompagnement commercial disponibles sur rendez-vous.
+  variants:
+  - id: bande
+    label: Lot en bande
+    aliases:
+    - bande
+    attributes:
+      plot_area_m2:
+        label: Superficie
+        min: 220
+        max: 320
+        unit: m²
+        note: entre 220 m² et 320 m²
+      build_guidelines:
+        label: Constructibilité
+        value: Emprise 60% au sol, R+2, sous-sol autorisé
+      delivery_timeline:
+        label: Livraison
+        value: Lots titrés prévus décembre 2025
+      price_per_m2_mad:
+        label: Prix au m²
+        value: 18000.0
+        unit: MAD/m²
+        note: Prix fixe de 18000 dh/m² quel que soit l'emplacement du lot
+      payment_terms:
+        label: Modalités de paiement
+        value: 50% d'avance à la réservation 50% à la livraison en décembre 2025
+      contract_type:
+        label: Contrat
+        value: c'est une demande de mise en option que le client nous fournit
+      vefa_status:
+        label: VEFA
+        value: il n'existe pas de VEFA permettant la vente de lots de terrain
+      orientation:
+        label: Orientation
+        value: la facade donnant sur la baie de tanger est majoritairement en orientation
+          Ouest
+      view:
+        label: Vue / vis-à-vis
+        value: tous les lots auront une vue panoramique sans vis-à-vis sur la baie
+          de tanger au moins au niveau du 2è étage, pour votre choix, il faut visiter
+          sur place et avoir plus de détail du commercial
+      budget_from_mad:
+        label: Budget à partir de
+        value: 3200000.0
+        unit: MAD
+        note: les budgets varient en fonction de la surface, ca démarre à 3,2 mdh
+  - id: jumele
+    label: Lot jumelé
+    aliases:
+    - jumelé
+    - jumelle
+    attributes:
+      plot_area_m2:
+        label: Superficie
+        min: 330
+        max: 680
+        unit: m²
+        note: entre 330 m² et 680 m²
+      build_guidelines:
+        label: Constructibilité
+        value: Emprise 40% au sol, R+2, sous-sol autorisé
+      delivery_timeline:
+        label: Livraison
+        value: Lots titrés prévus décembre 2025
+      price_per_m2_mad:
+        label: Prix au m²
+        value: 16000.0
+        unit: MAD/m²
+        note: Prix fixe de 16000 dh/m² quel que soit l'emplacement du lot
+      payment_terms:
+        label: Modalités de paiement
+        value: 50% d'avance à la réservation 50% à la livraison en décembre 2025
+      contract_type:
+        label: Contrat
+        value: c'est une demande de mise en option que le client nous fournit
+      vefa_status:
+        label: VEFA
+        value: il n'existe pas de VEFA permettant la vente de lots de terrain
+      orientation:
+        label: Orientation
+        value: la facade donnant sur la baie de tanger est majoritairement en orientation
+          Ouest
+      view:
+        label: Vue / vis-à-vis
+        value: tous les lots auront une vue panoramique sans vis-à-vis sur la baie
+          de tanger au moins au niveau du 2è étage, pour votre choix, il faut visiter
+          sur place et avoir plus de détail du commercial
+      budget_from_mad:
+        label: Budget à partir de
+        value: 5300000.0
+        unit: MAD
+        note: les budgets varient en fonction de la surface, c'est à partir de 5,3
+          MDH

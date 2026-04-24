@@ -1,0 +1,108 @@
+# - Update values under `project` if you host behind a public URL.
+# - Set `realtime.voice` to switch the OpenAI voice (e.g. sage, verse, alloy).
+# - Set `realtime.asr_model` if you prefer a different speech-to-text model.
+# - Flip `elevenlabs.enabled` to true and fill the IDs when using ElevenLabs voices.
+
+project:
+  gemini_api_key: ""
+  public_http_base_url: ""
+  suppress_audio_logs: true
+
+realtime:
+  # Gemini Live voice name (Kore, Puck, Charon, Aoede, Fenrir, etc.)
+  temperature: 0.65
+  voice: Kore
+  connect_attempts: 3
+  connect_backoff: 0.5
+  connect_backoff_max: 5.0
+  # Gemini Live model name.
+  asr_model: gemini-2.0-flash-live-001
+  input_transcription_language: fr
+  vad_threshold: 0.65
+  vad_prefix_padding_ms: 300
+  vad_silence_duration_ms: 500
+  playback_guard_ms: 1500
+  twilio_idle_timeout_s: 30.0
+  session_buffer_max_entries: 128
+  session_response_text_max_chars: 16000
+  session_function_args_max_chars: 16000
+  session_tool_attempt_max_entries: 32
+
+elevenlabs:
+  # Set to true once ElevenLabs keys are in .env and you want their TTS voices.
+  enabled: false
+  api_key: ""
+  voice_id: ""
+  model_id: eleven_multilingual_v2
+  base_url: https://api.elevenlabs.io
+  optimize_latency: 0
+  stability: 0.25
+  similarity: 0.75
+
+ingestion:
+  # Advanced: adjust only if you have custom embedding or storage requirements.
+  embed_model_name: sentence-transformers/all-MiniLM-L6-v2
+  lancedb_path: ./data/lancedb
+  doc_csv_path: ./data/docs
+  doc_txt_path: ./data/docs
+  doc_pdf_path: ./data/docs/source.pdf
+  chunk_chars: 800
+  chunk_overlap: 120
+
+retrieval:
+  # Advanced ranking knobs; defaults work for most hospitality deployments.
+  top_k: 4
+  distance: cosine
+  init_k: 24
+  use_mmr: true
+  mmr_lambda: 0.5
+  cross_encoder_model: ""
+  ef_search: 64
+  use_lexical_boost: true
+  lexical_weight: 0.25
+  csv_bias: 0.05
+  pdf_bias: 0.0
+  session_system_prompt_path: src/utils/prompts/alma_system_prompt.txt
+
+guardrails:
+  reservations:
+    rate_limit: 5
+    rate_window: 60
+    duplicate_window: 86400
+    min_phone_digits: 6
+    max_phone_digits: 15
+    max_notes_length: 500
+    allow_duplicate_without_prompt: true
+  knowledge:
+    min_length: 5
+    max_query_length: 256
+    rate_limit: 30
+    rate_window: 60
+    duplicate_window: 30
+    blocklist: []
+  rate_limit_hold_message: "Je suis momentanément limitée par le service externe. Merci de patienter quelques secondes."
+
+tools:
+  end_call_prompt: "Si la conversation est terminée et que l'interlocuteur n'a plus besoin d'aide, appelle le tool `end_call` avec `{}` pour raccrocher poliment."
+
+twilio:
+  account_sid: ""
+  auth_token: ""
+
+whatsapp_sip:
+  # phone_number_id from Meta Business Manager (META_SIP_USERNAME env var)
+  username: ""
+  # SIP password retrieved via Meta API with include_sip_credentials=true (META_SIP_PASSWORD env var)
+  password: ""
+  # Port pyVoIP listens on for incoming SIP from Meta (plain SIP; use nginx TLS in front)
+  listen_port: 5060
+  # Your server's public IP address so SIP responses go to the right place (META_SIP_MY_IP env var)
+  my_ip: ""
+  # Leave empty to accept calls from any IP; set to Meta's SIP server for IP allowlisting
+  meta_sip_server: ""
+
+monitoring:
+  enabled: true
+  sqlite_path: ./data/monitoring/call_ledger.sqlite3
+  transcript_history_enabled: true
+  transcript_history_dir: ./data/monitoring/transcripts
