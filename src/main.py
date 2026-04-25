@@ -15,19 +15,22 @@ if str(ROOT) not in sys.path:
 def main() -> None:
     load_dotenv()
     from src.utils.realtime import create_app
+    from src.utils.sip_server import sip_server
     from src.utils.whatsapp_calling import whatsapp_server
 
     app = create_app()
     port = int(os.getenv("PORT", "3000"))
 
-    # Start the WhatsApp SIP server in its own threads (pyVoIP is sync/threaded).
-    # It listens for incoming SIP INVITEs from Meta and bridges each call to Gemini Live.
-    # Set META_SIP_USERNAME + META_SIP_PASSWORD to enable; leave blank to skip.
+    # Generic SIP server — accepts calls from MicroSIP and any SIP client.
+    sip_server.start()
+
+    # WhatsApp Business SIP — only starts when META_SIP_USERNAME is configured.
     whatsapp_server.start()
 
     try:
         uvicorn.run(app, host="0.0.0.0", port=port)
     finally:
+        sip_server.stop()
         whatsapp_server.stop()
 
 
