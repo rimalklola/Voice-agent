@@ -1,61 +1,206 @@
-Refactor & Retrieval Changeover — Voice Agent (Twilio + OpenAI Realtime)
+# Alma AI Voice Agent
 
-Overview
-- Local retrieval using LanceDB and SentenceTransformers (always on).
-- Twilio call handling and OpenAI Realtime streaming preserved.
+A production-grade multilingual voice AI assistant for real estate customer engagement. Handles incoming calls via Twilio and WhatsApp Business SIP, streams audio through Google Gemini 2.0 Live for real-time conversation, and uses a local RAG pipeline (LanceDB + SentenceTransformers) for property knowledge retrieval.
 
-Setup
-- Python 3.10+ recommended.
-- Install deps: `pip install -r requirements.txt`
-- Set `OPENAI_API_KEY` in `.env` or environment.
+Built for Alma Resort (Tangier, Morocco) — qualifies leads, answers property questions, and books reservations in French, with support for Arabic, Darija, Spanish, and English.
 
-Docker Deploy
-- Copy `.env.example` to `.env` and fill in the required credentials (OpenAI, Twilio, ElevenLabs, etc.).
-- For a local container run, use `docker compose up --build` on first run or `docker compose up -d` afterward.
-- The container reads `ALMA_CONFIG_FILE` (default `/app/config/settings.yaml`); override it via `.env` if you mount a different config.
+---
 
-Linux VPS Deploy
-- Build a transportable image locally: `docker build -t alma-ai-voice-agent:vps .`
-- Either push that image to a registry, or export it as a tarball:
-  - `docker save alma-ai-voice-agent:vps | gzip > alma-ai-voice-agent-vps.tar.gz`
-- Copy the image archive, `.env`, `docker-compose.yml`, `config/settings.yaml`, and the `data/` directory you want on the server.
-- On the VPS, load the image if you used a tarball:
-  - `gunzip -c alma-ai-voice-agent-vps.tar.gz | docker load`
-- Then start it on the VPS with `docker compose up -d`.
-- Edit `.env` on the VPS to change voices, models, or API keys, then restart with `docker compose up -d`.
+## What's implemented
 
-Ingestion
-- Run: `python scripts/ingest_docs.py`
-- Creates `./data/lancedb` and builds/updates table `kb_docs`.
-- If `./data/docs/source.csv` or `./data/docs/source.pdf` are missing, sample docs are auto-created.
+### Voice conversation engine
+- Real-time audio streaming: Twilio (8 kHz µ-law) ↔ Gemini 2.0 Live (16 kHz input / 24 kHz output)
+- WebSocket reconnect with configurable retry/backoff
+- Playback guard to prevent audio overlap (default 1.5 s)
+- Configurable voice activity detection (VAD threshold, silence padding)
+- Optional ElevenLabs TTS fallback (multilingual v2)
 
-Query LanceDB (manual check)
-- Search the index with a text query and inspect matches:
-  - `python scripts/query_lancedb.py "What is the check-in time?" --top_k 4 --verify`
-  - Prints distance, similarity, snippet, and optional vector info.
+### WhatsApp Business SIP bridge
+- pyVoIP-based SIP/RTP bridge on port 5060 (TLS terminated upstream by nginx/HAProxy on 5061)
+- Shares the same Gemini Live engine and tool set as the Twilio path
 
-Config (defaults in `config/settings.yaml`, overrides via `src/utils/config.py`)
-- `EMBED_MODEL_NAME` (default: `sentence-transformers/all-MiniLM-L6-v2`)
-- `LANCEDB_PATH` (default: `./data/lancedb`)
-- `DOC_CSV_PATH` (default: `./data/docs/source.csv`)
-- `DOC_PDF_PATH` (default: `./data/docs/source.pdf`)
- - `CHUNK_CHARS` (default: `800`)
- - `CHUNK_OVERLAP` (default: `120`)
-- `TOP_K` (default: `4`)
-- `DISTANCE` (default: `cosine`)
-- `SESSION_SYSTEM_PROMPT` (default provided)
-- `ENABLE_OTEL` (default: `false`) — turn on OpenTelemetry tracing/log correlation
-- `OTEL_SERVICE_NAME` / `OTEL_ENVIRONMENT` — service metadata when telemetry is enabled
-- `OTEL_EXPORTER_OTLP_ENDPOINT` — OTLP gRPC endpoint (e.g. `http://localhost:4317`)
-- `REALTIME_CONNECT_ATTEMPTS`, `REALTIME_CONNECT_BACKOFF`, `REALTIME_CONNECT_BACKOFF_MAX` — retry tuning for the realtime websocket
+### Local RAG knowledge base
+- Document ingestion: CSV rows, PDF pages, and TXT files → chunked (800 chars, 120-char overlap)
+- Embedding: `sentence-transformers/all-MiniLM-L6-v2` (384-dim vectors) stored in LanceDB
+- Hybrid search: vector similarity (cosine) + lexical overlap scoring (4-gram)
+- MMR (Maximal Marginal Relevance) reranking for response diversity
+- Source-type biasing: upweight CSV facts, tune PDF weight independently
 
-Run
-- Start server: `python main.py`
-- Twilio points to `POST /incoming-call`; media stream upgrades to `/media-stream`.
+### Agent tools (LLM-callable)
+| Tool | What it does |
+|------|-------------|
+| `ask_to_reserve` | Captures visitor details, validates phone/email, deduplicates within 24 h, persists to SQLite |
+| `get_property_specs` | Returns apartment/villa/lot attributes from catalog JSON with fuzzy matching |
+| `get_project_info` | Document-grounded Q&A via retrieval pipeline (top-4 snippets) |
+| `get_project_facts` | Curated facts lookup (location, architects, delivery dates, security) |
+| `end_call` | Gracefully terminates the call |
 
-Tests
-- `pytest -q` (tests are lightweight and do not hit network).
+All tools have per-tool rate limits, input validation (regex phone/email, SQL injection guard), and response size clamping (16 000 chars max).
 
-Telemetry
-- Enable OpenTelemetry export by setting `ENABLE_OTEL=true` and pointing `OTEL_EXPORTER_OTLP_ENDPOINT` at your collector.
-- Logs now include `trace_id` / `span_id` fields so you can correlate application logs with spans in your APM.
+### Monitoring & compliance
+- SQLite call ledger: 40+ metrics per call (duration, tool usage counts, error events)
+- Full transcript history saved per call with source attribution
+- PII redaction in logs (phone numbers, email addresses masked)
+- Circuit breaker on external API calls
+
+### Observability
+- Structured JSON logs with `trace_id` / `span_id` correlation
+- Optional OpenTelemetry export (OTLP gRPC) — compatible with Datadog, Jaeger, etc.
+- Health check endpoint for readiness probes
+
+---
+
+## Tech stack
+
+| Layer | Technology |
+|-------|-----------|
+| LLM / voice | Google Gemini 2.0 Flash Live (`gemini-2.0-flash-live-001`) |
+| Telephony | Twilio media streams |
+| WhatsApp | pyVoIP SIP/RTP |
+| Vector DB | LanceDB |
+| Embeddings | SentenceTransformers `all-MiniLM-L6-v2` |
+| Web framework | FastAPI + Uvicorn |
+| TTS (optional) | ElevenLabs multilingual v2 |
+| Persistence | SQLite (call ledger + reservations) |
+| Observability | OpenTelemetry SDK + OTLP |
+| Container | Docker / Docker Compose (Python 3.11-slim) |
+
+---
+
+## Setup
+
+**Requirements:** Python 3.11+
+
+```bash
+pip install -r requirements.txt
+```
+
+Copy `.env.example` to `.env` and fill in credentials:
+
+```bash
+GEMINI_API_KEY=...
+TWILIO_ACCOUNT_SID=...
+TWILIO_AUTH_TOKEN=...
+PUBLIC_HTTP_BASE_URL=https://your-public-url   # Twilio webhook base
+
+# Optional
+ELEVENLABS_API_KEY=...
+ENABLE_OTEL=false
+OTEL_EXPORTER_OTLP_ENDPOINT=http://localhost:4317
+```
+
+---
+
+## Ingest documents
+
+Place CSV, PDF, or TXT files in `data/docs/`, then run:
+
+```bash
+python src/ingest_docs.py
+```
+
+Builds (or updates) the LanceDB table `kb_docs` at `./data/lancedb`. Missing sample files are auto-created.
+
+Verify the index:
+
+```bash
+python src/query_lancedb.py "What is the delivery date?" --top_k 4 --verify
+```
+
+---
+
+## Run
+
+```bash
+python src/main.py
+```
+
+- Twilio: configure `POST /incoming-call` as your webhook; media stream upgrades on `GET /media-stream`
+- WhatsApp SIP: listens on `META_SIP_LISTEN_PORT` (default 5060)
+
+---
+
+## Docker
+
+Local development:
+
+```bash
+docker compose up --build
+```
+
+VPS deployment (offline tarball):
+
+```bash
+docker build -t alma-ai-voice-agent:vps .
+docker save alma-ai-voice-agent:vps | gzip > alma-ai-voice-agent-vps.tar.gz
+# Copy archive + .env + docker-compose.yml + config/ + data/ to server
+gunzip -c alma-ai-voice-agent-vps.tar.gz | docker load
+docker compose up -d
+```
+
+The container reads config from `ALMA_CONFIG_FILE` (default `/app/config/settings.yaml`).
+
+---
+
+## Key configuration (`config/settings.yaml`)
+
+| Setting | Default | Description |
+|---------|---------|-------------|
+| `realtime.voice` | `Kore` | Gemini voice name |
+| `realtime.temperature` | `0.65` | Sampling temperature |
+| `realtime.vad_threshold` | `0.65` | Voice activity detection sensitivity |
+| `realtime.connect_attempts` | `3` | WebSocket retry attempts |
+| `realtime.playback_guard_ms` | `1500` | Anti-overlap guard (ms) |
+| `ingestion.chunk_chars` | `800` | Chunk size for document splitting |
+| `retrieval.top_k` | `4` | Context snippets returned per query |
+| `retrieval.use_mmr` | `true` | MMR diversity reranking |
+| `retrieval.mmr_lambda` | `0.5` | MMR diversity weight |
+| `retrieval.use_lexical_boost` | `true` | Hybrid vector + lexical search |
+| `guardrails.reservations.rate_limit` | `5 / 60 s` | Reservation tool rate limit |
+| `guardrails.knowledge.rate_limit` | `30 / 60 s` | Knowledge query rate limit |
+| `monitoring.enabled` | `true` | Call ledger + transcripts |
+
+All settings can be overridden via environment variables.
+
+---
+
+## Tests
+
+```bash
+pytest -q
+```
+
+Seven test files covering: end-to-end smoke, MMR retrieval, monitoring ledger, transcript history, and conversation flow. Tests do not hit the network.
+
+---
+
+## Project structure
+
+```
+src/
+├── main.py                    # Entrypoint — starts FastAPI + WhatsApp SIP server
+├── ingest_docs.py             # Document ingestion CLI
+├── query_lancedb.py           # Manual index query tool
+├── ingestion/                 # CSV / PDF / TXT loaders, chunking, embedder, LanceDB indexing
+├── retrieval/                 # LanceDB client, MMR + lexical pipeline
+└── utils/
+    ├── realtime.py            # Gemini Live streaming handler (FastAPI WebSocket)
+    ├── whatsapp_calling.py    # WhatsApp SIP bridge (pyVoIP)
+    ├── tools.py               # Agent tool implementations
+    ├── call_ledger.py         # SQLite call metrics store
+    ├── transcript_history.py  # Per-call conversation recorder
+    ├── pii_redaction.py       # Log-level PII masking
+    ├── circuit_breaker.py     # External API resilience
+    ├── telemetry.py           # OpenTelemetry integration
+    ├── monitoring.py          # Pilot call metrics
+    ├── config.py              # YAML config + env override loader
+    └── prompts/
+        └── alma_system_prompt.txt  # French commercial advisor system prompt
+config/
+└── settings.yaml              # Full configuration file
+data/
+├── docs/                      # Source documents (CSV, PDF, TXT)
+├── lancedb/                   # Vector database storage
+├── catalog/                   # Property catalog JSON files
+└── monitoring/                # SQLite ledger + transcript files
+```
