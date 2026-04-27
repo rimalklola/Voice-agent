@@ -121,10 +121,11 @@ sections:
     - avancement
     - livraison
     - chantier
-    text: 'Les travaux sont lancés avec cadence accélérée: lotissement livré fin décembre
-      2025; hôtel, appartements et villas front de mer livrés septembre 2027.
-
-      '
+    text: "Les travaux avancent à cadence soutenue. Le lotissement (93 lots) a été\
+      \ livré avec titres fonciers en décembre 2025 — les lots sont désormais disponibles\
+      \ immédiatement. L'hôtel 5★ Soho Boutique, les appartements RIPT, les résidences\
+      \ privées et les villas premium sont en cours de construction et seront livrés\
+      \ en septembre 2027. Un appartement témoin est prévu pour l'été 2026."
 - id: legal
   label: Cadre légal & gouvernance
   aliases:
@@ -325,32 +326,112 @@ sections:
   - id: security_nature
     label: Sécurité & Nature
     aliases: []
-    text: '• le projet a été concue comme une résidence fermée et sécurisée, seuls
-      les acquéreurs et clients de l''hôtel auront un accès au site
-
-      Le projet dispose d''un contrôle à l''accés qui sera construit à l''entrée du
-      site
-
-      • piocher les informations de la brochure, parler du club Alma et ses activités,
-      parler aussi de la zone récréative qui fait 3 ha avec nature conservée et accés
-      à la mer aménagé
-
-      • le projet dispose d''un accés direct à la mer, un aménagement sera réalisé
-      en plage artificielle, ponton plongeoire, un chiringuito pour la détente et
-      profiter de la vue exceptionnelle'
+    text: "Alma Resort est une résidence entièrement fermée et sécurisée, accessible\
+      \ uniquement aux acquéreurs et aux clients de l'hôtel Soho Boutique. Un poste\
+      \ de contrôle d'accès est installé à l'entrée du site avec gardiennage permanent.\
+      \ La résidence intègre une zone récréative de 3 hectares de nature préservée\
+      \ avec accès direct et exclusif à la mer : plage aménagée, ponton plongeoir,\
+      \ chiringuito, crique privée réservée aux résidents. L'Alma Club, le spa, les\
+      \ restaurants et les jardins paysagers complètent cette offre de vie premium\
+      \ dans un cadre sécurisé et confidentiel."
 - id: amenities
   label: Services & Équipements
   aliases:
   - services
   - équipements
+  - loisirs
+  - club
   entries:
   - id: amenities_overview
     label: Équipements de loisirs
-    aliases: []
-    text: • Prendre les informations de la brochure
+    aliases:
+    - équipements
+    - loisirs
+    - services
+    text: "Alma Resort offre une expérience de vie unique grâce à ses équipements de\
+      \ prestige : Alma Club avec piscine couverte chauffée, spa haut de gamme, hammam,\
+      \ salle de fitness, courts de padel, aire de jeux pour enfants et amphithéâtre\
+      \ végétal en plein air. Les résidents profitent également d'un chiringuito en\
+      \ bord de mer, d'une plage aménagée avec ponton et plongeoir, d'une crique exclusive\
+      \ réservée aux résidents, et de restaurants face mer avec vue panoramique sur\
+      \ la baie de Tanger. L'hôtel 5★ Soho Boutique (54 chambres dont 4 suites) propose\
+      \ son restaurant panoramique, son bar et sa piscine à débordement aux résidents.\
+      \ L'ensemble est intégré dans un cadre paysagé de 3 hectares préservés avec\
+      \ allées piétonnes arborées, pins parasols, caroubiers et chênes verts."
+  - id: alma_club
+    label: Alma Club
+    aliases:
+    - alma club
+    - club
+    - piscine
+    - spa
+    - fitness
+    - padel
+    text: "L'Alma Club est le cœur de loisirs de la résidence : piscine couverte chauffée,\
+      \ spa avec soins haut de gamme, hammam traditionnel, salle de fitness équipée,\
+      \ courts de padel, aire de jeux sécurisée pour enfants et amphithéâtre végétal\
+      \ pour événements en plein air. Accès inclus pour tous les résidents."
+  - id: beach_sea
+    label: Plage et crique
+    aliases:
+    - plage
+    - mer
+    - crique
+    - chiringuito
+    - baignade
+    text: "Accès direct et exclusif à la mer avec une crique aménagée réservée aux\
+      \ résidents. La zone balnéaire comprend une plage artificielle, un ponton plongeoir,\
+      \ un chiringuito pour la détente et la restauration légère, le tout avec une\
+      \ vue exceptionnelle sur la baie de Tanger. Zone récréative de 3 hectares avec\
+      \ nature conservée et cheminements piétons vers la mer."
+  - id: hotel_soho
+    label: Hôtel Soho Boutique
+    aliases:
+    - soho
+    - hôtel
+    - hotel
+    - restaurant
+    - bar
+    text: "L'hôtel 5★ Soho Boutique Hotels compte 54 chambres dont 4 suites. Les résidents\
+      \ peuvent profiter du restaurant panoramique avec terrasse sur la baie, du bar\
+      \ lounge, de la piscine à débordement de l'hôtel et de l'ensemble des services\
+      \ hôteliers premium. Le bureau de vente est ouvert du lundi au samedi de 10h à 18h."
 - id: commercial_terms
   label: Conditions commerciales
   aliases:
   - commercial
   - conditions
-  entries: []
+  - contact
+  - téléphone
+  - rendez-vous
+  entries:
+  - id: contacts
+    label: Contacts & horaires
+    aliases:
+    - contact
+    - téléphone
+    - email
+    - horaires
+    text: "Téléphone : +212 522 774 169. Email : contact@almaresort.ma. Site web :\
+      \ almaresort.ma. Le showroom sur site est ouvert du lundi au samedi de 10h à\
+      \ 18h. Un bureau à Casablanca est disponible sur rendez-vous."
+  - id: brochure
+    label: Brochure et documentation
+    aliases:
+    - brochure
+    - documentation
+    - catalogue
+    text: "Une brochure complète présentant tous les détails du projet (plans, surfaces,\
+      \ finitions, équipements) peut être envoyée par WhatsApp ou par email sur simple\
+      \ demande."
+  - id: visits
+    label: Visites et rendez-vous
+    aliases:
+    - visite
+    - rdv
+    - rendez-vous
+    - showroom
+    text: "Un showroom est disponible directement sur le site avec vue sur la baie\
+      \ de Tanger. Les visites se font sur rendez-vous avec nos conseillers commerciaux\
+      \ présents sur place du lundi au samedi de 10h à 18h. Il est également possible\
+      \ de visiter le site depuis la route pour se faire une idée de l'emplacement."

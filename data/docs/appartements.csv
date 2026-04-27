@@ -21,7 +21,7 @@ le F2 c'est 1 chambre, un salon avec une cuisine soit ouverte ou fermée
 Le F3 c'est 2 chambres salon avec cuisine fermée"
 RIPT,Places de parking,Charque appartement dispose d'une place de parking titrée au sous sol
 RIPT,Ameublement,chaque appartement sera livrée meublé aux standard du gestionnaire
-RIPT,superficie,voir la brochure
+RIPT,superficie,"F1 : 30 à 40 m² habitable + terrasse 20 à 30 m² — F2 : 50 m² habitable + terrasse 20 à 30 m² — F3 : 85 à 100 m² habitable + terrasse 20 à 30 m²"
 RIPT,Budget,"en fonction des surfaces, il varie pour:
  les F1 entre 1,3 MDH et 1,8 MDH
 Les F2, on est sur une moyenne de 2,3 Mdh 
@@ -50,7 +50,7 @@ Le F3 c'est 2 chambres salon avec cuisine fermée
 Le F4 c'est 3 chambres salon avec cuisine fermée"
 Appartements privés,Places de parking,Charque appartement dispose d'une place de parking titrée au sous sol
 Appartements privés,Ameublement,"non les appartements ne seront pas meublés, ils seront meublés sur les résidences RIPT seulement"
-Appartements privés,superficies,voir la brochure
+Appartements privés,superficies,"F2 : 50 m² habitable + terrasse 20 à 40 m² — F3 : 85 à 100 m² habitable + terrasse 20 à 40 m² — F4 : 110 à 150 m² habitable + terrasse 20 à 40 m² — F4 Duplex : 195 m² habitable + terrasse 50 à 70 m² + jardin privatif ~24 m² avec piscine privée"
 Appartements privés,Budget,"en fonction des surfaces, il varie pour:
  les F2 entre 2,1 MDH et 2,6 MDH
  les F3 entre 3,5 MDH et 5 MDH

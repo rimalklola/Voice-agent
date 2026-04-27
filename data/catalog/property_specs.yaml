@@ -759,7 +759,7 @@ categories:
         value: Emprise 60% au sol, R+2, sous-sol autorisé
       delivery_timeline:
         label: Livraison
-        value: Lots titrés prévus décembre 2025
+        value: Lots livrés avec titres fonciers depuis décembre 2025 — disponibles immédiatement
       price_per_m2_mad:
         label: Prix au m²
         value: 18000.0
@@ -767,7 +767,7 @@ categories:
         note: Prix fixe de 18000 dh/m² quel que soit l'emplacement du lot
       payment_terms:
         label: Modalités de paiement
-        value: 50% d'avance à la réservation 50% à la livraison en décembre 2025
+        value: 50% à la réservation, 50% à la livraison du titre foncier
       contract_type:
         label: Contrat
         value: c'est une demande de mise en option que le client nous fournit
@@ -805,7 +805,7 @@ categories:
         value: Emprise 40% au sol, R+2, sous-sol autorisé
       delivery_timeline:
         label: Livraison
-        value: Lots titrés prévus décembre 2025
+        value: Lots livrés avec titres fonciers depuis décembre 2025 — disponibles immédiatement
       price_per_m2_mad:
         label: Prix au m²
         value: 16000.0
@@ -813,7 +813,7 @@ categories:
         note: Prix fixe de 16000 dh/m² quel que soit l'emplacement du lot
       payment_terms:
         label: Modalités de paiement
-        value: 50% d'avance à la réservation 50% à la livraison en décembre 2025
+        value: 50% à la réservation, 50% à la livraison du titre foncier
       contract_type:
         label: Contrat
         value: c'est une demande de mise en option que le client nous fournit
