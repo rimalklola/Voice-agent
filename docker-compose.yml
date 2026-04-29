@@ -9,8 +9,10 @@ services:
     environment:
       ALMA_CONFIG_FILE: ${ALMA_CONFIG_FILE:-/app/config/settings.yaml}
     ports:
-      - "3000:3000"
+      - "3001:3001"           # HTTP / Twilio WebSocket
+      - "5060:5060/udp"       # SIP signalling (MicroSIP / any SIP client)
+      - "10000-20000:10000-20000/udp"  # RTP media
     volumes:
       - ./config:/app/config:ro
       - ./data:/app/data
-    command: uvicorn src.utils.realtime:create_app --factory --host 0.0.0.0 --port 3000
+    restart: unless-stopped

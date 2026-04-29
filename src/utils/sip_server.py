@@ -34,6 +34,7 @@ import numpy as np
 try:
     from pyVoIP.VoIP.phone import VoIPPhone, VoIPPhoneParameter
     from pyVoIP.VoIP.call import VoIPCall, CallState
+    from pyVoIP.VoIP.status import PhoneStatus
     from pyVoIP.SIP.client import SIPClient
     from pyVoIP.SIP.message import SIPMessage, SIPMessageType
     HAS_PYVOIP = True
@@ -487,10 +488,20 @@ async def _bridge_call_to_gemini(call: Any) -> None:
 if HAS_PYVOIP:
     class RegistrarSIPClient(SIPClient):
         """
-        Minimal SIP registrar shim.  When MicroSIP (or any SIP client) sends
-        a REGISTER, we reply 200 OK so it considers itself connected.
-        All other message types are handled by the parent class as normal.
+        SIPClient that acts as its own registrar:
+        - Skips self-registration on startup (no outbound REGISTER sent).
+        - Responds 200 OK to any inbound REGISTER (e.g. from MicroSIP).
+        - All other messages handled normally by the parent.
         """
+
+        def register(self) -> None:
+            """Skip outbound registration — we are the server, not a client."""
+            self.phone._status = PhoneStatus.REGISTERED
+            logger.debug("SIP self-registration skipped (server mode)")
+
+        def deregister(self) -> bool:
+            """Skip deregistration on shutdown."""
+            return True
 
         def handle_new_connection(self, conn: Any) -> None:
             raw = conn.peak()
